@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     meta: {
@@ -49,9 +48,9 @@ module.exports = function(grunt) {
       }
     },
 
-    eslint: {
-      target: ['lib/**/*.js']
-    },
+    // eslint: {
+    //   target: ['lib/**/*.js']
+    // },
 
     karma: {
       options: {
@@ -75,10 +74,6 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      watch: {
-        files: ['lib/**/*.js'],
-        tasks: ['watch']
-      },
       build: {
         files: ['lib/**/*.js'],
         tasks: ['build']

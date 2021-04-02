@@ -132,11 +132,12 @@
           method: method.value,
           headers: getHeaders()
         };
-
+        
         request.innerHTML = JSON.stringify(options, null, 2);
-
+        console.log(options)
+        
         axios(options)
-          .then(function (res) {
+          .success(function (res) {
             response.innerHTML = JSON.stringify(res.data, null, 2);
           })
           .catch(function (res) {
